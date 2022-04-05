@@ -27,14 +27,14 @@ ImageNet Pretrained Model from Pytorch
 The effectiveness of our proposed methods with different backbone network on the test of DOTA.
 |Backbone|Detector|+GS|Weight|mAP(%)|
 |:---:|:---:|:---:|:---:|:---:|
-|ResNet-101|Faster R-CNN||[download](https://github.com/ssyc123/GSNet/releases/download/untagged-c7767122a182097a4961/FastRCNN_DOTA_Baseline.pth)|73.09|
-|ResNet-101|Faster R-CNN|+|[download](https://github.com/ssyc123/GSNet/releases/download/untagged-c7767122a182097a4961/FastRCNN_DOTA_GSNet.pth)|79.37|
+|ResNet-101|Faster R-CNN||[download](https://github.com/ssyc123/GSNet/releases/download/v1.0/FastRCNN_DOTA_Baseline.pth)|73.09|
+|ResNet-101|Faster R-CNN|+|[download](https://github.com/ssyc123/GSNet/releases/download/v1.0/FastRCNN_DOTA_GSNet.pth)|79.37|
 
 
 GSNet Results in HRSC2016.
 |Backbone|Detector|Weight|mAP(%)|
 |:---:|:---:|:---:|:---:|
-|ResNet-101|Faster R-CNN|[download](https://github.com/ssyc123/GSNet/releases/download/untagged-c7767122a182097a4961/FastRcnn_HRSC_GSNet.pth)|90.50|
+|ResNet-101|Faster R-CNN|[download](https://github.com/ssyc123/GSNet/releases/download/v1.0/FastRcnn_HRSC_GSNet.pth)|90.50|
 
 
 ## Installation
