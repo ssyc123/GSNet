@@ -4,26 +4,7 @@ import torch.nn.functional as F
 from mmcv.cnn import xavier_init
 from collections import OrderedDict
 from ..registry import NECKS
-from ..utils import ConvModule, _GlobalConvModule, _BoundaryRefineModule
-
-
-# def conv2d(filter_in, filter_out, kernel_size, stride=1):
-#     pad = (kernel_size - 1) // 2 if kernel_size else 0
-#     return nn.Sequential(OrderedDict([
-#         ("conv", nn.Conv2d(filter_in, filter_out, kernel_size=kernel_size, stride=stride, padding=pad, bias=False)),
-#         ("bn", nn.BatchNorm2d(filter_out)),
-#         ("relu", nn.LeakyReLU(0.1)),
-#     ]))
-
-# def make_five_conv(filters_list, in_filters):
-#     m = nn.Sequential(
-#         conv2d(in_filters, filters_list[0], 1),
-#         conv2d(filters_list[0], filters_list[1], 3),
-#         conv2d(filters_list[1], filters_list[0], 1),
-#         conv2d(filters_list[0], filters_list[1], 3),
-#         conv2d(filters_list[1], filters_list[0], 1),
-#     )
-#     return m
+from ..utils import ConvModule
 
 @NECKS.register_module
 class RRAFPN(nn.Module):
@@ -70,9 +51,7 @@ class RRAFPN(nn.Module):
         self.make_five_conv_use = nn.ModuleList()
         self.lateral_convs = nn.ModuleList()
         self.fpn_convs = nn.ModuleList()
-        # self.gcn_convs = nn.ModuleList()
-        # self.br_convs = nn.ModuleList()
-        # self.l1_convs = nn.ModuleList()
+
 
         for i in range(self.start_level, self.backbone_end_level):
             # RA________________________________________________________________________________________________________
@@ -96,29 +75,9 @@ class RRAFPN(nn.Module):
                 norm_cfg=norm_cfg,
                 activation=self.activation,
                 inplace=False)
-            # l1_conv = ConvModule(
-            #     in_channels[i],
-            #     self.cls_num,
-            #     1,
-            #     conv_cfg=conv_cfg,
-            #     norm_cfg=norm_cfg,
-            #     activation=self.activation,
-            #     inplace=False)
-            # gcn_conv = _GlobalConvModule(
-            #     in_channels[i],
-            #     self.cls_num,
-            #     (self.kernel_size, self.kernel_size)
-            # )
-            # #####################################
-            # br_conv = _BoundaryRefineModule(
-            #     self.cls_num
-            # )
 
             self.lateral_convs.append(l_conv)
             self.fpn_convs.append(fpn_conv)
-            # self.l1_convs.append(l1_conv)
-            # self.gcn_convs.append(gcn_conv)
-            # self.br_convs.append(br_conv)
             self.make_five_conv_use.append(ra)
 
 
@@ -186,26 +145,7 @@ class RRAFPN(nn.Module):
 
     def forward(self, inputs):
         assert len(inputs) == len(self.in_channels)
-        # l1_out_lays = [
-        #     l1_conv(inputs[i + self.start_level]) for i, l1_conv in enumerate(self.l1_convs)
-        # ]
-        # # gcn___________________________________________________________________________________________________________
-        # gcn_out_lays = [
-        #     gcn_conv(inputs[i + self.start_level]) for i, gcn_conv in enumerate(self.gcn_convs)
-        # ]
-        # # gcn___________________________________________________________________________________________________________
-        #
-        # # br____________________________________________________________________________________________________________
-        # br_out_lays = [
-        #     br_conv(gcn_out_lays[i + self.start_level]) for i, br_conv in enumerate(self.br_convs)
 
-        # ]
-        # br____________________________________________________________________________________________________________
-        # # +
-        # for i in range(len(br_out_lays)):
-        #     br_out_lays[i] = l1_out_lays[i] + br_out_lays[i]
-        # # 1x1___________________________________________________________________________________________________________
-        # print("-------------------------------------------------------------------------------------------")
         laterals = [
             # inputs[i + self.start_level]:backbone输出的fmp
             # lateral_conv(inputs[i + self.start_level]) for i, lateral_conv in enumerate(self.lateral_convs)
