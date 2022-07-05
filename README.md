@@ -57,7 +57,12 @@ We appreciate all contributions to improve benchmarks for object detection in ae
 If you use our work, please consider citing:
 
 ```
-
+@article{shen2022learning,
+  title={Enhanced Neck Feature Representation for Object Detection in Aerial Images},
+  author={Shen, Yuchen and Zhang, Dong and Song, Zhihao and Jiang, Xuesong and Ye, Qiaolin},
+  journal={arXiv preprint arXiv:2204.02033},
+  year={2022}
+}
 ```
 
 ## Thanks to the Third Party Libs
