@@ -57,8 +57,8 @@ If you use our work, please consider citing:
 
 ```
 @article{shen2022learning,
-  title={Learning to Reduce Information Bottleneck for Object Detection in Aerial Images},
-  author={Shen, Yuchen and Zhang, Dong and Song, Zhihao and Jiang, Xuesong and Ye, Qiaolin},
+  title={Learning to reduce information bottleneck for object detection in aerial images},
+  author={Shen, Yuchen and Song, Zhihao and Fu, Liyong and Jiang, Xuesong and Ye, Qiaolin},
   journal={arXiv preprint arXiv:2204.02033},
   year={2022}
 }
