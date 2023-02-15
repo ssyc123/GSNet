@@ -1,5 +1,5 @@
 
-# Learning to Reduce Information Bottleneck for Object Detection in Aerial Images [arxiv](https://arxiv.org/abs/2204.02033)
+# Learning to Reduce Information Bottleneck for Object Detection in Aerial Images [arxiv](https://arxiv.org/abs/2204.02033v2)
 
 Object detection in aerial images is a fundamental research topic in the geoscience and remote sensing domain. However, the advanced approaches on this topic mainly focus on designing the elaborate backbones or head networks but ignore neck networks. In this letter, we first underline the importance of the neck network in object detection from the perspective of information bottleneck. Then, to alleviate the information deficiency problem in the current approaches, we propose a global semantic
 network (GSNet), which acts as a bridge from the backbone network to the head network in a bidirectional global pattern. Compared to the existing approaches, our model can capture the rich and enhanced image features with less computational costs. Besides, we further propose a feature fusion refinement module (FRM) for different levels of features, which are suffering from the problem of semantic gap in feature fusion. To demonstrate the effectiveness and efficiency of our approach, experiments are carried out on two challenging and representative aerial image datasets (i.e., DOTA and HRSC2016). Experimental results in terms of accuracy and complexity validate the superiority of our method. The code has been open-sourced at GSNet.
@@ -60,7 +60,7 @@ If you use our work, please consider citing:
 @article{shen2022learning,
   title={Learning to Reduce Information Bottleneck for Object Detection in Aerial Images},
   author={Shen, Yuchen and Zhang, Dong and Song, Zhihao and Jiang, Xuesong and Ye, Qiaolin},
-  journal={arXiv preprint arXiv:2204.02033},
+  journal={arXiv preprint arXiv:2204.02033v2},
   year={2022}
 }
 ```
