@@ -19,9 +19,6 @@ Object detection in aerial images is a critical and essential task in the fields
 This repository is created to build benchmarks for object detection in aerial images. The master branch works with **PyTorch 1.1** or higher. If you would like to use PyTorch 0.4.1, please checkout to the [pytorch-0.4.1](https://github.com/open-mmlab/mmdetection/tree/pytorch-0.4.1) branch.
 
 ## Results
-![Different class results](/show/fig4.png)
-Visualization results for oriented object detection on the test set of DOTA.
-
 ![Baseline and GSNet results](/show/fig3.png)
  Comparisons with the baseline on DOTA for oriented object detection with ResNet-101.
 
@@ -38,19 +35,17 @@ Please refer to [INSTALL.md](INSTALL.md) for installation.
 #### Get started
 Please see [GETTING_STARTED.md](GETTING_STARTED.md) for the basic usage of mmdetection.
 
-#### Our weights
-Our results with different backbones on the test of DOTA.
+## Our weights
+#### Our results with different backbones on the test of DOTA.
 |Backbone|Detector|+GS|Weight|mAP(%)|
 |:---:|:---:|:---:|:---:|:---:|
 |ResNet-101|Faster R-CNN||[download](https://github.com/ssyc123/GSNet/releases/download/v1.0/FastRCNN_DOTA_Baseline.pth)|73.09|
 |ResNet-101|Faster R-CNN|+|[download](https://github.com/ssyc123/GSNet/releases/download/v1.0/FastRCNN_DOTA_GSNet.pth)|79.37|
 
-
-Our results on HRSC2016.
+#### Our results on HRSC2016.
 |Backbone|Detector|Weight|mAP(%)|
 |:---:|:---:|:---:|:---:|
 |ResNet-101|Faster R-CNN|[download](https://github.com/ssyc123/GSNet/releases/download/v1.0/FastRcnn_HRSC_GSNet.pth)|90.50|
-
 
 ## Citing
 If you use our work, please consider citing:
