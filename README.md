@@ -13,8 +13,6 @@ https://arxiv.org/abs/2204.02033v2
 <p align="justify">
 Object detection in aerial images is a critical and essential task in the fields of geoscience and remote sensing. Despite the popularity of computer vision methods in detecting objects in aerial images, these methods have been faced with significant limitations such as appearance occlusion and variable image sizes. In this letter, we explore the limitations of conventional neck networks in object detection by analyzing information bottlenecks. We propose an enhanced neck network to address the information deficiency issue in current neck networks. Our proposed neck network serves as a bridge between the backbone network and the head network. The enhanced neck network comprises a global semantic network (GSNet) and a feature fusion refinement module (FRM). The GSNet is designed to perceive contextual surroundings and propagate discriminative knowledge through a bidirectional global pattern. The FRM is developed to exploit different levels of features to capture comprehensive location information. We validate the efficacy and efficiency of our approach through experiments conducted on two challenging datasets, DOTA and HRSC2016. Our method outperforms existing approaches in terms of accuracy and complexity, demonstrating the superiority of our proposed method. The code has been open-sourced at GSNet.
 
-****
-
 ## Introduction
 This repository is created to build benchmarks for object detection in aerial images. The master branch works with **PyTorch 1.1** or higher. If you would like to use PyTorch 0.4.1, please checkout to the [pytorch-0.4.1](https://github.com/open-mmlab/mmdetection/tree/pytorch-0.4.1) branch.
 
