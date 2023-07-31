@@ -48,11 +48,12 @@ Please see [GETTING_STARTED.md](GETTING_STARTED.md) for the basic usage of mmdet
 ## Citing
 If you use our work, please consider citing:
 ```
-@article{shen2022learning,
+@article{shen2023learning,
   title={Learning to reduce information bottleneck for object detection in aerial images},
-  author={Yuchen, Shen and Dong, Zhang and Zhihao, Song and Xuesong, Jiang and Qiaolin, Ye},
-  journal={arXiv preprint arXiv:2204.02033},
-  year={2022}
+  author={Shen, Yuchen and Zhang, Dong and Song, Zhihao and Jiang, Xuesong and Ye, Qiaolin},
+  journal={IEEE Geoscience and Remote Sensing Letters},
+  year={2023},
+  publisher={IEEE}
 }
 ```
 
